@@ -18,7 +18,7 @@ torchrun --nproc_per_node=${ngpu} train/fine-tune_on_custom_dataset.py \
 --model_name openai/whisper-small \
 --language zh \
 --sampling_rate 16000 \
---num_proc 4 \
+--num_proc 2 \
 --train_strategy epoch \
 --learning_rate 3e-3 \
 --warmup 1000 \
