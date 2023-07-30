@@ -30,7 +30,7 @@ python3 custom_data/data_prep.py \
 # finetuning pinyin
 
 torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
---model_name openai/whisper-large-v2 \
+--model_name openai/whisper-medium \
 --language en \
 --sampling_rate 16000 \
 --num_proc 4 \
@@ -60,7 +60,7 @@ python3 evaluate/evaluate_on_custom_dataset.py \
 # finetuning char
 
 torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
---model_name openai/whisper-large-v2 \
+--model_name openai/whisper-medium \
 --language zh \
 --sampling_rate 16000 \
 --num_proc 4 \
