@@ -8,7 +8,7 @@ torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
 --warmup 1000 \
 --train_batchsize 12 \
 --eval_batchsize 6 \
---num_epochs 20 \
+--num_epochs 100 \
 --resume_from_ckpt None \
 --output_dir op_dir_epoch-char \
 --train_datasets output_data-char/train  \

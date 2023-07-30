@@ -268,6 +268,7 @@ def compute_metrics(pred):
         pred_str = [normalizer(pred) for pred in pred_str]
         label_str = [normalizer(label) for label in label_str]
 
+    wer = 100 * metric.compute(predictions=pred_str, references=label_str)
     print("\n")
     print("label_ids:", label_ids[0][0:50])
     print("pred_ids :", pred_ids[0][0:50])
@@ -276,7 +277,6 @@ def compute_metrics(pred):
     print("wer:", wer)
     print("\n")
 
-    wer = 100 * metric.compute(predictions=pred_str, references=label_str)
     return {"wer": wer}
 
 
