@@ -13,12 +13,10 @@ python3 custom_data/data_prep.py \
 --source_data_dir data/test \
 --output_data_dir output_data/test
 
-# finetune
+# finetuning
 
-ngpu=10  # number of GPUs to perform distributed training on.
-
-torchrun --nproc_per_node=${ngpu} train/fine-tune_on_custom_dataset.py \
---model_name openai/whisper-large-v2 \
+torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
+--model_name openai/whisper-small \
 --language zh \
 --sampling_rate 16000 \
 --num_proc 4 \
@@ -33,7 +31,7 @@ torchrun --nproc_per_node=${ngpu} train/fine-tune_on_custom_dataset.py \
 --train_datasets output_data/train  \
 --eval_datasets output_data/dev output_data/test
 
-# evaluate
+# evaluation
 
 python3 evaluate/evaluate_on_custom_dataset.py \
 --is_public_repo False \
