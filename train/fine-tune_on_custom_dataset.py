@@ -273,6 +273,7 @@ def compute_metrics(pred):
     print("pred_ids :", pred_ids[0][0:50])
     print("label_str:", label_str[0][0:50])
     print("pred_str :", pred_str[0][0:50])
+    print("wer:", wer)
     print("\n")
 
     wer = 100 * metric.compute(predictions=pred_str, references=label_str)
