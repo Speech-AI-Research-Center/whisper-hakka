@@ -13,3 +13,4 @@ torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
 --output_dir op_dir_epoch-char \
 --train_datasets output_data-char/train  \
 --eval_datasets output_data-char/dev
+
