@@ -1,6 +1,6 @@
 torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
 --model_name openai/whisper-base \
---language en \
+--language zh \
 --sampling_rate 16000 \
 --num_proc 4 \
 --train_strategy epoch \
