@@ -29,8 +29,8 @@ python3 custom_data/data_prep.py \
 
 # finetuning pinyin
 
-torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
---model_name openai/whisper-medium \
+torchrun --nproc_per_node=1 train/fine-tune_on_custom_dataset.py \
+--model_name openai/whisper-base \
 --language en \
 --sampling_rate 16000 \
 --num_proc 4 \
@@ -59,8 +59,8 @@ python3 evaluate/evaluate_on_custom_dataset.py \
 
 # finetuning char
 
-torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
---model_name openai/whisper-medium \
+torchrun --nproc_per_node=1 train/fine-tune_on_custom_dataset.py \
+--model_name openai/whisper-base \
 --language zh \
 --sampling_rate 16000 \
 --num_proc 4 \

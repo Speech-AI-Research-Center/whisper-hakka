@@ -252,7 +252,8 @@ data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 print('DATASET PREPARATION COMPLETED')
 
 
-metric = evaluate.load("wer")
+metric_wer = evaluate.load("wer")
+metric_cer = evaluate.load("cer")
 def compute_metrics(pred):
     pred_ids = pred.predictions
     label_ids = pred.label_ids
@@ -268,16 +269,18 @@ def compute_metrics(pred):
         pred_str = [normalizer(pred) for pred in pred_str]
         label_str = [normalizer(label) for label in label_str]
 
-    wer = 100 * metric.compute(predictions=pred_str, references=label_str)
+    wer = 100 * metric_wer.compute(predictions=pred_str, references=label_str)
+    cer = 100 * metric_cer.compute(predictions=pred_str, references=label_str)
     print("\n")
     print("label_ids:", label_ids[0][0:50])
     print("pred_ids :", pred_ids[0][0:50])
     print("label_str:", label_str[0][0:50])
     print("pred_str :", pred_str[0][0:50])
     print("wer:", wer)
+    print("cer:", cer)
     print("\n")
 
-    return {"wer": wer}
+    return {"wer": wer, "cer": cer }
 
 
 ###############################     TRAINING ARGS AND TRAINING      ############################
