@@ -122,7 +122,7 @@ def main(args):
             op_file = op_file + '_' + args.hf_model.replace('/', '_')
         else:
             op_file = op_file + '_' + args.ckpt_dir.split('/')[-1].replace('/', '_')
-        result_file = open(op_file, 'w')
+        result_file = open(op_file, 'w', encoding="utf-8")
         result_file.write('\nWER: ' + str(wer) + '\n')
         result_file.write('CER: ' + str(cer) + '\n')
         result_file.write('\nNORMALIZED WER: ' + str(norm_wer) + '\n')
