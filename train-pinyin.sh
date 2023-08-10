@@ -1,4 +1,4 @@
-torchrun --nproc_per_node=2 train/fine-tune_on_custom_dataset.py \
+torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
 --model_name openai/whisper-base \
 --language en \
 --sampling_rate 16000 \
@@ -6,8 +6,8 @@ torchrun --nproc_per_node=2 train/fine-tune_on_custom_dataset.py \
 --train_strategy epoch \
 --learning_rate 6.25e-6 \
 --warmup 1000 \
---train_batchsize 32 \
---eval_batchsize 16 \
+--train_batchsize 64 \
+--eval_batchsize 32 \
 --num_epochs 100 \
 --resume_from_ckpt None \
 --output_dir op_dir_epoch-pinyin \
