@@ -8,6 +8,15 @@ Some of the models trained and evaluated using these scripts can be found [here 
 Code snippets have been made available to extract relevant embeddings from different layers of whisper models with varied configurations.
 
 
+# Results on Test Set
+
+## 客語拼音 (pinyin)
+SER :  7.18
+
+## 客語漢字 (character)
+CER :  4.14
+
+
 ## Contents
 
 - [Setup](#setup)
