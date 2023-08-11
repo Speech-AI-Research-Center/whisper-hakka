@@ -1,4 +1,4 @@
-# Fine-tuning and evaluating Whisper models for FSR-2023 - Hakka Speech Recognition
+# Fine-tuning and evaluating Whisper models for Formosa Speech in the Wild Challenge 2023 - Hakka Speech Recognition
 
 This repository contains the relevant scripts to fine-tune and evaluate Whisper models of various configurations available over huggingface on Taiwanese Hakka Speech.
 
@@ -7,7 +7,7 @@ Some of the models trained and evaluated using these scripts can be found [here 
 
 Code snippets have been made available to extract relevant embeddings from different layers of whisper models with varied configurations.
 
-# Results on Test Set
+# Results on Test subset of FSR-2023-Hakka-Lavalier-Train 
 
 ## 客語拼音 (pinyin)
 SER :  7.18
