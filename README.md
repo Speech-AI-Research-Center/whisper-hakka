@@ -1,12 +1,11 @@
 # Fine-tuning and evaluating Whisper models for FSR-2023 - Hakka Speech Recognition
 
-This repository contains the relevant scripts to fine-tune and evaluate Whisper models of various configurations available over huggingface 🤗.
+This repository contains the relevant scripts to fine-tune and evaluate Whisper models of various configurations available over huggingface on Taiwanese Hakka Speech.
 
-Scripts in this repository support fine-tuning these models using custom datasets which haven't been made available over huggingface.
+Scripts in this repository support fine-tuning these models using custom Taiwanese Hakka datasets which haven't been made available over huggingface.
 Some of the models trained and evaluated using these scripts can be found [here on huggingface](https://huggingface.co/vasista22).
 
 Code snippets have been made available to extract relevant embeddings from different layers of whisper models with varied configurations.
-
 
 # Results on Test Set
 
