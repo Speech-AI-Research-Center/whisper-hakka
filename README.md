@@ -9,12 +9,17 @@ Code snippets have been made available to extract relevant embeddings from diffe
 
 # Results on Test subset of FSR-2023-Hakka-Lavalier-Train 
 
-## 客語拼音 (pinyin)
-SER :  7.18
+### 客語拼音 (pinyin) SER (%)
 
-## 客語漢字 (character)
-CER :  4.14
+| base  | medium |
+|:-----:|:-----:|
+| 7.18  |  |
 
+### 客語漢字 (character) CER (%)
+
+| base  | medium |
+|:-----:|:-----:|
+| 4.14  | 3.78 |
 
 ## Contents
 
