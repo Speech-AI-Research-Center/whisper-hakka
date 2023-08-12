@@ -8,6 +8,7 @@ torchrun --nproc_per_node=10 train/fine-tune_on_custom_dataset.py \
 --warmup 1000 \
 --train_batchsize 64 \
 --eval_batchsize 32 \
+--gradient_accumulation_steps 1 \
 --num_epochs 100 \
 --resume_from_ckpt None \
 --output_dir op_dir_epoch-pinyin \

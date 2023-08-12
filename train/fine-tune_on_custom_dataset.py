@@ -74,6 +74,13 @@ parser.add_argument(
     help='Batch size during the evaluation phase.'
 )
 parser.add_argument(
+    '--gradient_accumulation_steps', 
+    type=int, 
+    required=False, 
+    default=1, 
+    help='Number of updates steps to accumulate the gradients for, before performing a backward/update pass.'
+)
+parser.add_argument(
     '--num_epochs', 
     type=int, 
     required=False, 
@@ -314,7 +321,7 @@ elif args.train_strategy == 'steps':
     training_args = Seq2SeqTrainingArguments(
         output_dir=args.output_dir,
         per_device_train_batch_size=args.train_batchsize,
-        gradient_accumulation_steps=1,
+        gradient_accumulation_steps=args.gradient_accumulation_steps,
         learning_rate=args.learning_rate,
         warmup_steps=args.warmup,
         gradient_checkpointing=gradient_checkpointing,
