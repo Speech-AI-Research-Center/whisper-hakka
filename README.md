@@ -11,9 +11,9 @@ Code snippets have been made available to extract relevant embeddings from diffe
 
 ### 客語拼音 (pinyin) SER (%)
 
-| base  | medium |
-|:-----:|:-----:|
-| 7.18  |  |
+| base  | medium | large-v2 |
+|:-----:|:-----:|:-----:|
+| 7.18  |  |  |
 
 ### 客語漢字 (character) CER (%)
 
