@@ -281,8 +281,8 @@ def compute_metrics(pred):
     print("\n")
     print("label_ids:", label_ids[0][0:50])
     print("pred_ids :", pred_ids[0][0:50])
-    print("label_str:", label_str[0][0:50])
-    print("pred_str :", pred_str[0][0:50])
+    print("label_str:", label_str[0])
+    print("pred_str :", pred_str[0])
     print("wer:", wer)
     print("cer:", cer)
     print("\n")
@@ -334,7 +334,7 @@ elif args.train_strategy == 'steps':
         save_total_limit=10,
         per_device_eval_batch_size=args.eval_batchsize,
         predict_with_generate=True,
-        generation_max_length=225,
+        generation_max_length=300,
         logging_steps=500,
         report_to=["tensorboard"],
         load_best_model_at_end=True,
