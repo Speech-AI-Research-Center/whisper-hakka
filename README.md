@@ -17,9 +17,9 @@ Code snippets have been made available to extract relevant embeddings from diffe
 
 ### 客語漢字 (character) CER (%)
 
-| base  | medium |
-|:-----:|:-----:|
-| 4.14  | 3.78 |
+| base  | medium | large-v2 |
+|:-----:|:-----:|:-----:|
+| 4.14  | 3.78 | 2.69 |
 
 ## Contents
 
