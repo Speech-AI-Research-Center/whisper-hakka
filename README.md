@@ -1,4 +1,4 @@
-# Fine-tuning and evaluating Whisper models for Formosa Speech in the Wild Challenge 2023 - Hakka Speech Recognition
+# Fine-tuning and evaluating Whisper models for Formosa Speech in the Wild Challenge 2025 - Hakka Speech Recognition
 
 This repository contains the relevant scripts to fine-tune and evaluate Whisper models of various configurations available over huggingface on Taiwanese Hakka Speech.
 
@@ -38,13 +38,21 @@ Code snippets have been made available to extract relevant embeddings from diffe
 
 ## Setup
 
-These scripts have been tested with Python 3.8 and cuda 11.3.
+These scripts have been tested with Python 3.10 and cuda 11.8.
 
 It is recommended that you setup a virtual environment for the installation purpose and work within the same. The following set of commands would setup a virtual environment and complete the installation:
 
+install miniconda
 ```bash
-python3 -m venv env_whisper-finetune
-source env_whisper-finetune/bin/activate
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
+```
+
+```bash
+conda create -n myenv python=3.10
+conda activate
 
 python3 -m pip install --upgrade pip
 pip install -r requirements.txt
