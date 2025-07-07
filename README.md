@@ -7,20 +7,6 @@ Some of the models trained and evaluated using these scripts can be found [here 
 
 Code snippets have been made available to extract relevant embeddings from different layers of whisper models with varied configurations.
 
-# Results on Test subset of FSR-2023-Hakka-Lavalier-Train 
-
-### 客語拼音 (pinyin) SER (%)
-
-| base  | medium | large-v2 |
-|:-----:|:-----:|:-----:|
-| 7.18  |  |  |
-
-### 客語漢字 (character) CER (%)
-
-| base  | medium | large-v2 |
-|:-----:|:-----:|:-----:|
-| 4.14  | 3.78 | 2.69 |
-
 ## Contents
 
 - [Setup](#setup)
